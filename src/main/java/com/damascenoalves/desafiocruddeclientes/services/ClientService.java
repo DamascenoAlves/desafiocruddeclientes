@@ -4,9 +4,11 @@ package com.damascenoalves.desafiocruddeclientes.services;
 import com.damascenoalves.desafiocruddeclientes.dto.ClientDTO;
 import com.damascenoalves.desafiocruddeclientes.entities.Client;
 import com.damascenoalves.desafiocruddeclientes.repositories.ClientRepository;
+import com.damascenoalves.desafiocruddeclientes.services.exceptions.DatabaseException;
 import com.damascenoalves.desafiocruddeclientes.services.exceptions.ResourceNotFoundException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -50,6 +52,17 @@ public class ClientService {
             return new ClientDTO(entity);
         }catch (EntityNotFoundException e){
             throw new ResourceNotFoundException("Recurso nao encontrado");
+        }
+    }
+    public void delete(Long id) {
+        if (!repository.existsById(id)) {
+            throw new ResourceNotFoundException("Recurso não encontrado");
+        }
+        try {
+            repository.deleteById(id);
+        }
+        catch (DataIntegrityViolationException e) {
+            throw new DatabaseException("Falha de integridade referencial");
         }
     }
 
