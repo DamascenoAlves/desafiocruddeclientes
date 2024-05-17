@@ -1,14 +1,18 @@
 package com.damascenoalves.desafiocruddeclientes.dto;
 
 import com.damascenoalves.desafiocruddeclientes.entities.Client;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
 
 import java.time.LocalDate;
 
 public class ClientDTO {
     private Long id;
+    @NotBlank(message = "Campo requerido")
     private String name;
     private String cpf;
     private Double income;
+    @PastOrPresent (message = "Data de nascimento invalida")
     private LocalDate birthDate;
     private Integer children;
 
