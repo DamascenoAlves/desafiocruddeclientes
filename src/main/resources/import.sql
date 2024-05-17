@@ -1,0 +1,10 @@
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Carla Diaz',       '12345678901',   3000.0,TIMESTAMP '1990-11-28',0);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Victor Sarro',     '12345678901',   5000.0,TIMESTAMP '1988-12-05',2);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Rogério Ceni',     '12345678901',   8000.0,TIMESTAMP '1973-01-22',3);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Neymar Junior',    '12345678901',3000000.0,TIMESTAMP '1992-02-05',2);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Travis Scott',     '12345678901', 335000.0,TIMESTAMP '1991-04-30',2);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Till Lindemann',   '12345678901',  34000.0,TIMESTAMP '1963-01-04',2);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Ana Castela',      '12345678901', 235000.0,TIMESTAMP '2003-11-16',0);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Marcelo Rezende',  '12345678901',  54000.0,TIMESTAMP '1951-07-25',5);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Luan Santana',     '12345678901', 545000.0,TIMESTAMP '1991-03-13',2);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Aline Barros',     '12345678901',  40000.0,TIMESTAMP '1976-10-07',2);
